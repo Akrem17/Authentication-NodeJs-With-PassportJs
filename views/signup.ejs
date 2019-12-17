@@ -1,0 +1,64 @@
+
+        <div class=" center">
+       
+          <h4>Sign Up</h4>
+            <div class="row">
+                <div class="col m4 s3"></div>
+                <div class="col s4">
+                  <%- include('./partiel/messages.ejs'); %>
+                  <form action="/users/signup" method="POST">
+                 
+                      <div class="row">
+                        <div class="input-field ">
+                          <i class="material-icons prefix">group</i>
+                          <input name="name" id="name" type="text" class="validate"
+                          value="<%= typeof name != 'undefined' ? name : '' %>"
+
+                          >
+                          <label for="username">Full name</label>
+                        </div>
+                      </div>
+                      
+                    <div class="row">
+                        <div class="input-field">
+                        <i class="material-icons prefix"> email </i>
+                        <input name="email" id="email" type="email" class="validate"
+                        value="<%= typeof email != 'undefined' ? email : '' %>"
+
+                        >
+                        <label for="email">Email</label>
+                    </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field  ">
+                        <i class="material-icons prefix">group</i>
+                        <input name="username" id="username" type="text" class="validate"
+                        value="<%= typeof username != 'undefined' ? username : '' %>"
+
+                        >
+                        <label for="username">Username</label>
+                      </div>
+                    </div>
+                    
+                        <div class="row">
+                          <div class="input-field ">
+                            <i  class="material-icons prefix">more_horiz</i>
+                            <input name="password" id="password" type="password" class="validate"
+                            value="<%= typeof password != 'undefined' ? password : '' %>"
+
+                            >
+                            <label for="password">Password</label>
+                          </div>
+                        </div>
+
+                       <span class="left" >Do u have an account ?<a href="login"> Login</a> </span>
+                          <button class="btn" type="submit" name="action">Sign Up
+                            <i class="material-icons left">send</i>
+                          </button>
+                        
+                      </form>
+                    </div>
+              </div>
+                  
+        </div>
+      
